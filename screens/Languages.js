@@ -6,15 +6,16 @@ export default function Languages() {
     const {i18n} = useTranslation()
     // Supported Languages List
 
-    const {supportedLngs} = i18n.services.resourceStore.data
+    const supportedLngs = Object.keys(i18n.services.resourceStore.data);
+
 
     return (
 
         <View style={styles.container}>
             <FlatList data={supportedLngs} renderItem={({item}) => (
 
-                <TouchableOpacity onPress={() => i18n.changeLanguage(item.code)} style={styles.listItem}>
-                    <Text>{item.locale}</Text>
+                <TouchableOpacity onPress={() => i18n.changeLanguage(item)} style={styles.listItem}>
+                    <Text>{item}</Text>
                 </TouchableOpacity>
             )}/>
         </View>

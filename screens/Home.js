@@ -1,9 +1,11 @@
 import {Button, StyleSheet, Text, View} from 'react-native';
 import {useTranslation} from "react-i18next";
+import {useEffect} from "react";
 
 
 export default function Home({navigation}) {
-    const {t} = useTranslation()
+    const {t,i18n} = useTranslation()
+
 
 
     return (
