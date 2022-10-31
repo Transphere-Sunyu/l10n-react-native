@@ -18,6 +18,9 @@ export default function Home({navigation}) {
             <Text style={{...styles.body, color: '#fff'}}>
                 {t('home_body')}
             </Text>
+             <Text style={{...styles.body, color: '#fff',padding :'0%'}}>
+                {t('launch_date',{count:3,value:2000 })}
+            </Text>
             <Button color={'#f97316'} title={t('home_button_text')} onPress={() => navigation.navigate('Languages')}/>
         </View>
 

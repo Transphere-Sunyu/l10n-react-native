@@ -2,8 +2,6 @@ import i18n from 'i18next';
 import * as Localization from 'expo-localization';
 import {initReactI18next} from "react-i18next";
 
-// creating a language detection plugin using expo
-// http://i18next.com/docs/ownplugin/#languagedetector
 
 const languageDetector = {
     type: 'languageDetector',
@@ -28,7 +26,7 @@ i18n
     .init({
         fallbackLng: 'en-US',
         compatibilityJSON: 'v3',
-        lng:Localization.locale,
+        lng: Localization.locale,
         // the translations
         // realworld load that via xhr or bundle those using webpack
         resources: {
@@ -40,6 +38,9 @@ i18n
                     header_title_lang: 'Change Language',
                     home_button_text: 'Change Language',
                     home_body: "Never miss a meeting. Never be late for one too. Keep track of your meetings and receive smart reminders in appropriate times. Read your smart “Daily Agenda” every morning.",
+                    launch_date: '{{count}} day left to launch',
+                    launch_date_plural: '{{count}} days left to launch',
+                    
 
 
                 }
@@ -52,7 +53,7 @@ i18n
                     header_title_lang: '语言',
                     home_button_text: '改变语言',
                     home_body: "永远不要错过会议。也不要迟到。跟踪您的会议并在适当的时间收到智能提醒。每天早上阅读您的智能“每日议程”。",
-
+                    launch_date: '距离发射还有 {{count}} 天 ',
                 }
             },
             // have a initial namespace
